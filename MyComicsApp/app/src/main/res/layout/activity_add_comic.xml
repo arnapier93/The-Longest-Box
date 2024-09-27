@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddComicActivity">
+
+    <include
+        android:id="@+id/app_bar_main"
+        layout="@layout/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/marvel_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/marvel"
+        android:textSize="18sp"
+        android:paddingHorizontal="10dp"
+        />
+
+    <CheckBox
+        android:id="@+id/dc_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="75dp"
+        android:layout_toEndOf="@id/marvel_checkbox"
+        android:text="@string/dc"
+        android:textSize="18sp"
+        android:paddingHorizontal="10dp"
+        />
+
+    <CheckBox
+        android:id="@+id/indie_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="75dp"
+        android:layout_toEndOf="@id/dc_checkbox"
+        android:text="@string/indie"
+        android:textSize="18sp"
+        android:paddingHorizontal="10dp"
+        />
+
+    <EditText
+        android:id="@+id/indie_publisher_field"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="10dp"
+        android:layout_toEndOf="@id/indie_checkbox"
+        android:autofillHints="true"
+        android:background="@color/light_grey"
+        android:hint="@string/publisher"
+        android:inputType="textCapWords"
+        android:paddingHorizontal="10dp"
+        android:textSize="@dimen/editTextHintSize"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/series_title_field"
+        android:inputType="textCapWords"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marvel_checkbox"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/light_grey"
+        android:hint="@string/series_title"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        android:textSize="@dimen/editTextHintSize"
+        android:autofillHints="true" />
+
+    <EditText
+        android:id="@+id/issue_number_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/marvel_checkbox"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/series_title_field"
+        android:background="@color/light_grey"
+        android:hint="@string/issue_num"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        android:textSize="@dimen/editTextHintSize"
+        tools:ignore="Autofill" />
+
+    <ImageView
+        android:id="@+id/scan_to_add"
+        android:src="@drawable/add_photo"
+        android:layout_width="150dp"
+        android:layout_height="268dp"
+        android:layout_below="@id/series_title_field"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/scan_to_be_added" />
+
+    <EditText
+        android:id="@+id/writer_field"
+        android:inputType="textCapWords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/series_title_field"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toEndOf="@id/scan_to_add"
+        android:background="@color/light_grey"
+        android:hint="@string/writer"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        android:textSize="@dimen/editTextHintSize"
+        android:autofillHints="true" />
+
+    <EditText
+        android:id="@+id/artist_field"
+        android:inputType="textCapWords"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/writer_field"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:layout_toEndOf="@id/scan_to_add"
+        android:background="@color/light_grey"
+        android:hint="@string/artist"
+        android:paddingHorizontal="10dp"
+        android:textSize="@dimen/editTextHintSize"
+        android:autofillHints="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/published_date_title"
+        android:layout_below="@id/artist_field"
+        android:layout_toEndOf="@id/scan_to_add"
+        android:layout_marginStart="15dp"
+        android:text="Date Published:"
+        android:textSize="22sp"/>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/published_date_field"
+        android:layout_below="@id/published_date_title"
+        android:layout_toEndOf="@id/scan_to_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:layout_marginStart="10dp">
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:id="@+id/published_month_picker"
+            android:layout_marginHorizontal="5dp"
+            >
+        </NumberPicker>
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:id="@+id/published_day_picker"
+            android:layout_marginHorizontal="5dp"
+
+            android:layout_toEndOf="@id/published_month_picker">
+        </NumberPicker>
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_toEndOf="@id/published_day_picker"
+            android:layout_marginHorizontal="5dp"
+
+            android:id="@+id/published_year_picker">
+        </NumberPicker>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/purchased_date_title"
+        android:layout_below="@id/published_date_field"
+        android:layout_toEndOf="@id/scan_to_add"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Date Purchased:"
+        android:textSize="22sp"/>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/purchased_date_field"
+        android:layout_below="@id/purchased_date_title"
+        android:layout_toEndOf="@id/scan_to_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:layout_marginStart="10dp">
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:id="@+id/purchased_month_picker"
+            android:layout_marginHorizontal="5dp">
+        </NumberPicker>
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:id="@+id/purchased_day_picker"
+            android:layout_toEndOf="@id/purchased_month_picker"
+            android:layout_marginHorizontal="5dp">
+        </NumberPicker>
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_toEndOf="@id/purchased_day_picker"
+            android:id="@+id/purchased_year_picker"
+            android:layout_marginHorizontal="5dp">
+        </NumberPicker>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/dollar_sign"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/purchased_date_field"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:layout_toEndOf="@id/scan_to_add"
+        android:src="@drawable/dollar"
+        android:contentDescription="@string/dollar_sign" />
+
+    <EditText
+        android:id="@+id/purchased_price_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purchased_date_field"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:layout_toEndOf="@id/dollar_sign"
+        android:background="@color/light_grey"
+        android:hint="@string/purchased_price"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        android:textSize="@dimen/editTextHintSize"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/scan_button"
+        android:backgroundTint="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/scan_to_add"
+        android:layout_marginHorizontal="40dp"
+        android:text="@string/scan" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purchased_price_field"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <Button
+            android:id="@+id/add_to_library_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toEndOf="@id/return_to_library_button"
+            android:backgroundTint="@color/red"
+            android:text="@string/add_to_library" />
+
+        <Button
+            android:id="@+id/return_to_library_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/red"
+            android:text="return to library" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

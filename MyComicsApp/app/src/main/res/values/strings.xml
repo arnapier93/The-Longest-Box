@@ -1,0 +1,39 @@
+<resources>
+    <string name="mycomicsapp">My Comics App</string>
+    <string name="marvel">Marvel</string>
+    <string name="dc">DC</string>
+    <string name="indie">Indie</string>
+    <string name="all">All</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="registration_blurb">If you do not have an account click register below to sign up</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="library">Library</string>
+    <string name="add_new_comic">Add New Comic</string>
+    <string name="store_locator">Store Locator</string>
+    <string name="amazing_fantasy">Amazing Fantasy</string>
+    <string name="series_title">Series Title</string>
+    <string name="issue_num">Issue #</string>
+    <string name="writer">Writer</string>
+    <string name="artist">Artist</string>
+    <string name="publisher">Publisher</string>
+    <string name="purchased_date">Purchased Date</string>
+    <string name="scan">Scan</string>
+    <string name="purchased_price">Purchased Price</string>
+    <string name="add_to_library">Add to library</string>
+    <string name="dollar_sign">dollar sign</string>
+    <string name="published_date">Published Date</string>
+    <string name="scan_to_be_added">scan to be added</string>
+    <string name="title_activity_shop_locator">ShopLocatorActivity</string>
+    <string name="welcome_to_my_comics_app">welcome to my comics app</string>
+    <string name="please_login">Please Login</string>
+    <string name="login">Login</string>
+    <string name="add_comic_button">Add comic button</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_comic_shop_locator">ComicShopLocatorActivity</string>
+    <string name="comic_shop_locator">Comic Shop Locator</string>
+    <string name="scan_result">Scan result:\\n%1$s</string>
+    <string name="get_directions_to_selected_store">Get directions to selected store</string>
+</resources>

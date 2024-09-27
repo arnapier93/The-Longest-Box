@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LibraryActivity">
+
+    <item
+        android:id="@+id/action_library"
+        android:icon="@drawable/library_icon"
+        android:orderInCategory="0"
+        android:title="@string/library"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/action_add_comic"
+        android:icon="@drawable/plus_icon"
+        android:orderInCategory="1"
+        android:title="@string/add_new_comic"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/action_comic_shop_locator"
+        android:icon="@drawable/pin_icon"
+        android:orderInCategory="2"
+        android:title="@string/comic_shop_locator"
+        app:showAsAction="always"
+        />
+
+</menu>
